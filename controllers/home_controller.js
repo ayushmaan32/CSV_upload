@@ -1,3 +1,5 @@
 module.exports.home = function (req, res) {
-  return res.send("hello");
+  return res.render("home", {
+    title: "CSV Reader",
+  });
 };
