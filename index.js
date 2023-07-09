@@ -7,12 +7,16 @@ const db = require("./config/mongoose");
 
 const app = express();
 
-//setting up view engine
-app.set("view engine", "ejs");
-app.set("views", "./views");
+const expressLayouts = require("express-ejs-layouts");
+
+app.use(expressLayouts);
 
 // use express router
 app.use("/", require("./routes"));
+
+//setting up view engine
+app.set("view engine", "ejs");
+app.set("views", "./views");
 
 app.listen(port, function (err) {
   if (err) {
