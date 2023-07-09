@@ -1,13 +1,15 @@
 // importing Packages
 const express = require("express");
 
-const port = 8000;
+const port = 5000;
 
 const db = require("./config/mongoose");
 
 const app = express();
 
 const expressLayouts = require("express-ejs-layouts");
+
+app.use(express.static("./assets"));
 
 app.use(expressLayouts);
 
