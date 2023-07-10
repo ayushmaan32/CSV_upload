@@ -17,3 +17,30 @@
     </div>
   </form>
 </div>
+
+  <!-- list of uploaded files -->
+  <div class="file-list">
+    <h2>Uploaded Files:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Actions</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% csvfiles.forEach(function(file) { %>
+          <tr>
+            <td><%= file.fileName %></td>
+            <td>
+              <a href="/view/<%= file._id %>" class="view-btn">View</a>
+              
+            </td>
+            <td><a href="/delete/<%= file._id %>" class="delete-btn">Delete</a></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>

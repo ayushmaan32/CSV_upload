@@ -16,11 +16,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: 4% 11% 10% 17%;
-  border: 3px double rgb(217, 125, 5);
+  margin: 4% 11% 4% 17%;
   background-color: rgb(220, 219, 219);
   width: 60%;
   padding: 4vh;
+  box-shadow: inset 0px 0px 12px grey;
 }
 label {
   font-weight: 700;
@@ -45,4 +45,53 @@ label {
 }
 .upload-btn:hover {
   background-color: rgb(37, 37, 78);
+}
+
+.file-list {
+  margin-top: 40px;
+}
+
+table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  margin: auto;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: rgb(232, 219, 215);
+}
+
+.view-btn,
+.delete-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  /* background-color: #f2f2f2; */
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.view-btn {
+  background-color: darkblue;
+  color: white;
+}
+.delete-btn {
+  background-color: red;
+}
+
+.view-btn:hover:hover {
+  background-color: #b7a9ed;
+}
+.delete-btn:hover {
+  background-color: rgb(192, 119, 119);
 }
