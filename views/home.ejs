@@ -1,1 +1,19 @@
+<link rel="stylesheet" href="/css/home.css" />
 
+<div class="container">
+  <!-- heading  -->
+  <div class="header">
+    <h1>CSV File Reader</h1>
+  </div>
+
+  <!-- upload box -->
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <div class="input-box">
+      <label for="csvFile">Select a CSV file to upload:</label>
+      <div class="input">
+        <input type="file" id="csvFile" name="file" accept=".csv" />
+        <button class="upload-btn">Upload</button>
+      </div>
+    </div>
+  </form>
+</div>
