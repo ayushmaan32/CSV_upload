@@ -34,3 +34,23 @@ module.exports.upload = async function (req, res) {
     res.status(500).send("An error occurred during CSV file upload.");
   }
 };
+
+// controller for delete csv file
+module.exports.delete = async function (req, res) {
+  try {
+    const fileId = req.params.id;
+
+    // Find the file by its unique identifier (fileId) in the database
+    const file = await CSV.findById(fileId);
+
+    if (!file) {
+      return res.status(404).send("File not found.");
+    }
+    // Delete the file from the database
+    await CSV.deleteOne({ _id: fileId });
+    return res.redirect("/");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("An error occurred while deleting the file.");
+  }
+};
