@@ -1,6 +1,6 @@
 ## CSV Upload
 
-This is simple csv file reader when user can upload a csv file and view file in tabular form.
+This is simple csv file reader where user can upload a csv file and view file in tabular form.
 
 ## Features
 
