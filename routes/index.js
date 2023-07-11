@@ -11,5 +11,6 @@ const upload = multer({ dest: "uploads/files" });
 router.get("/", homeController.home);
 router.post("/upload", upload.single("csv"), csvController.upload);
 router.get("/delete/:id", csvController.delete);
+router.get("/view/:id", csvController.viewfile);
 
 module.exports = router;

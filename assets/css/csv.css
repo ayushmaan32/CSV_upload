@@ -1,0 +1,74 @@
+/* csv view styling*/
+
+.container {
+  margin: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.file-contents {
+  margin-top: 20px;
+}
+
+.file-contents h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  margin-bottom: 10px;
+}
+
+.search-box input[type="text"] {
+  padding: 5px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #45a049;
+}
+
+.csv-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+.csv-table th,
+.csv-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.csv-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.csv-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.csv-table tbody tr:hover {
+  background-color: #e2e2e2;
+}
+
+.csv-table thead tr th:first-child,
+.csv-table tbody tr td:first-child {
+  text-align: left;
+}

@@ -1,0 +1,40 @@
+<!-- csv-view.ejs -->
+
+<link rel="stylesheet" href="/css/csv.css" />
+
+<div class="container">
+  <!-- heading  -->
+  <div class="header">
+    <h1>CSV File View</h1>
+  </div>
+
+  <!-- Search input box -->
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search..." />
+    <button id="search-btn">Search</button>
+  </div>
+
+  <!-- CSV file contents -->
+  <div class="file-contents">
+    <h2>File Name: <%= file %></h2>
+    <!-- Display the parsed CSV data -->
+    <table class="csv-table">
+      <thead>
+        <tr>
+          <% for (const head of heading) { %>
+          <th><%= head %></th>
+          <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(const row of data) { %>
+        <tr>
+          <% for(const key of Object.keys(row)) { %>
+          <td><%= row[key] %></td>
+          <% } %>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
