@@ -46,7 +46,7 @@ Node.js, MongoDB, express, Ejs
 | --- | -- csv<br>
 | --- routes<br>
 | --- | -- index<br>
-| --- | -- uploads<br>
+| --- uploads<br>
 | --- | -- | -- files<br>
 | --- views<br>
 | --- | -- \_header<br>
