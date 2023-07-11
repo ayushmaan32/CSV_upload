@@ -1,3 +1,4 @@
+/* home page css */
 * {
   margin: 0;
 }
@@ -53,7 +54,6 @@ label {
 
 table {
   width: 100%;
-  /* border-collapse: collapse; */
   margin: auto;
 }
 
@@ -76,7 +76,6 @@ tr:hover {
   display: inline-block;
   padding: 5px 10px;
   text-decoration: none;
-  /* background-color: #f2f2f2; */
   color: #333;
   border: 1px solid #ddd;
   border-radius: 4px;

@@ -1,4 +1,4 @@
-console.log("loaded");
+// console.log("loaded");
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-btn");
 const tableRows = document.querySelectorAll(".csv-table tbody tr");

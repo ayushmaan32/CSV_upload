@@ -10,7 +10,7 @@ module.exports.upload = async function (req, res) {
       return res.status(400).send("No file uploaded.");
     }
 
-    // file is not csv
+    // if file is not csv
     if (req.file.mimetype != "text/csv") {
       return res.status(400).send("Select CSV files only.");
     }
@@ -27,8 +27,6 @@ module.exports.upload = async function (req, res) {
 
     // Save the CSV document to the database
     await csv.save();
-
-    // File processing is complete
     return res.redirect("/");
   } catch (error) {
     console.error(error);
@@ -80,8 +78,6 @@ module.exports.viewfile = async function (req, res) {
       })
       .on("data", (data) => records.push(data))
       .on("end", () => {
-        // console.log(results.length);
-        // console.log(results);
         res.render("viewfile", {
           title: "CSV Reader",
           file: file.fileName,
